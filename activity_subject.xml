@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/layout/activity_subject.xml -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Screen Title -->
+        <TextView
+            android:id="@+id/tv_class_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Subject"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#1565C0"
+            android:gravity="center"
+            android:paddingTop="24dp"
+            android:paddingBottom="8dp" />
+
+        <!-- Subtitle -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Choose a subject to study"
+            android:textSize="16sp"
+            android:textColor="#555555"
+            android:gravity="center"
+            android:paddingBottom="32dp" />
+
+        <!-- Science Button -->
+        <Button
+            android:id="@+id/btn_science"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Science"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:background="#388E3C"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Maths Button -->
+        <Button
+            android:id="@+id/btn_maths"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Maths"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:background="#F57C00"
+            android:layout_marginBottom="16dp" />
+
+        <!-- History Button -->
+        <Button
+            android:id="@+id/btn_history"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="History"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:background="#7B1FA2"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Geography Button -->
+        <Button
+            android:id="@+id/btn_geography"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Geography"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:background="#0097A7"
+            android:layout_marginBottom="16dp" />
+
+        <!-- English Button -->
+        <Button
+            android:id="@+id/btn_english"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="English"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:background="#C62828"
+            android:layout_marginBottom="16dp" />
+
+    </LinearLayout>
+
+</ScrollView>
