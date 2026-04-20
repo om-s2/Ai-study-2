@@ -10,18 +10,15 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-      - name: Build APK
+      - name: Setup Android Project
         run: |
-          if [ ! -f "gradlew" ]; then
-            gradle init --type basic
-            echo "include ':app'" > settings.gradle
-            mkdir -p app
-            printf "plugins {\n    id 'com.android.application'\n}\nandroid {\n    namespace 'com.aistudy.app'\n    compileSdk 33\n}" > app/build.gradle
-          fi
-          ./gradlew assembleDebug
+          echo "include ':app'" > settings.gradle
+          printf "plugins {\n    id 'com.android.application'\n}\nandroid {\n    namespace 'com.aistudy.app'\n    compileSdk 33\n    defaultConfig { minSdk 21 }\n}" > app/build.gradle
+      - name: Build with Gradle
+        run: gradle assembleDebug
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: StudyApp-APK
-          path: "**/*.apk"
+          name: AI-Study-App
+          path: app/build/outputs/apk/debug/*.apk
           
